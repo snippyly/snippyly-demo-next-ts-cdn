@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "snipply-sdk-staging"
+  },
+  "targets": {
+    "snipply-sdk-staging": {
+      "hosting": {
+        "default": [
+          "snippyly-demo-next-ts-cdn"
+        ],
+        "wdp": [
+          "snippyly-demo-next-ts-cdn-wdp"
+        ]
+      }
+    }
+  }
+}
