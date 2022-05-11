@@ -1,5 +1,4 @@
 const loadSnippyly = (callback: Function) => {
-    console.log('load snippyly called')
     const existingScript = document.getElementById('snippylyScript');
     if (!existingScript) {
         const script = document.createElement('script');

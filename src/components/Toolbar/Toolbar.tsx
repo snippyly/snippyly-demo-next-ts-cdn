@@ -1,27 +1,29 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import { useSnippylyClient } from '../../context/snippylyContext';
 import { Users } from '../../users';
+import Menus from '../Menus/Menus';
 
-function Toolbar() {
+function Toolbar({ onMenuSelect }: { onMenuSelect: Function }) {
     const [selectedUser, setSelectedUser] = useState<any>(null);
     const users = Users;
 
     const { client } = useSnippylyClient();
 
     useEffect(() => {
-        // If user is logged in then set it to selected user state
         if (localStorage.getItem('user')) {
             setSelectedUser(JSON.parse(localStorage.getItem('user')!));
         }
     }, [])
 
     useEffect(() => {
+        // To call identifySnippyly once Snippyly is loaded and user is available
         if (selectedUser && client) {
             identifySnippyly();
         }
-    }, [selectedUser && client])
+    }, [selectedUser, client])
 
+    // To set user in Snippyly
     const identifySnippyly = async () => {
         if (client) {
             client.identify(selectedUser).then((res) => {
@@ -47,6 +49,7 @@ function Toolbar() {
     return (
         <div className='header'>
             <snippyly-presence></snippyly-presence>
+            <Menus onMenuSelect={onMenuSelect} />
             <div>
                 {
                     selectedUser ?
