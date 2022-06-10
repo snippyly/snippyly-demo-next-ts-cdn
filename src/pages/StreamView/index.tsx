@@ -2,8 +2,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useEffect } from 'react';
-import Toolbar from '../components/Toolbar/Toolbar';
-import { useSnippylyClient } from '../context/snippylyContext';
+import Toolbar from '../../components/Toolbar/Toolbar';
+import { useSnippylyClient } from '../../context/snippylyContext';
 
 const StreamView: NextPage = () => {
     const { client } = useSnippylyClient();
