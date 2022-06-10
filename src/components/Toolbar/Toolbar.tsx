@@ -44,9 +44,18 @@ function Toolbar() {
         setSelectedUser(user);
     }
 
+    const navigateTo = (path: string, target: string = '_self') => {
+        window.open(path, target);
+    }
+
     return (
         <div className='header'>
             <snippyly-presence></snippyly-presence>
+            <div className='menu-container'>
+                <span className='menu' onClick={() => navigateTo('/')}>Home</span>
+                <span className='menu' onClick={() => navigateTo('/StreamView')}>Stream View</span>
+                <span className='menu' onClick={() => navigateTo('https://snippyly-demo-next-ts-cdn-wdp.web.app/', '_blank')}>Document Params</span>
+            </div>
             <div>
                 {
                     selectedUser ?
