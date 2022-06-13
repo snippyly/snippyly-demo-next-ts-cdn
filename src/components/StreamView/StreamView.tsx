@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useEffect } from 'react';
 import Toolbar from '../../components/Toolbar/Toolbar';
 import { useSnippylyClient } from '../../context/snippylyContext';
 
-const StreamView: NextPage = () => {
+const StreamView = ({ setView }: { setView: Function }) => {
     const { client } = useSnippylyClient();
 
     useEffect(() => {
@@ -30,7 +29,7 @@ const StreamView: NextPage = () => {
                     <img src='https://cdn-icons-png.flaticon.com/512/727/727570.png' alt='Add comment' />
                 </div>
             </snippyly-comment-tool>
-            <Toolbar />
+            <Toolbar setView={setView} />
             <div className='stream-view-container' id='streamViewContainer'>
                 <div className='stream-view-docs'>
                     <p>

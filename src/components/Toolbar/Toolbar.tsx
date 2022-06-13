@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useSnippylyClient } from '../../context/snippylyContext';
 import { Users } from '../../users';
 
-function Toolbar() {
+function Toolbar({ setView }: { setView: Function }) {
     const [selectedUser, setSelectedUser] = useState<any>(null);
     const users = Users;
 
@@ -53,7 +53,7 @@ function Toolbar() {
             <snippyly-presence></snippyly-presence>
             <div className='menu-container'>
                 <span className='menu' onClick={() => navigateTo('/')}>Home</span>
-                <span className='menu' onClick={() => navigateTo('/StreamView')}>Stream View</span>
+                <span className='menu' onClick={() => setView('stream-view')}>Stream View</span>
                 <span className='menu' onClick={() => navigateTo('https://snippyly-demo-next-ts-cdn-wdp.web.app/', '_blank')}>Document Params</span>
             </div>
             <div>
