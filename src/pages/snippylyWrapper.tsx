@@ -28,6 +28,8 @@ export default function SnippylyWrapper({ children }: { children: any }) {
         // To enable text comment feature
         const commentElement = client.getCommentElement();
         commentElement.enableTextComments(true);
+        // Enable attachment feature
+        commentElement.enableAttachment(true);
     }
 
     return (
