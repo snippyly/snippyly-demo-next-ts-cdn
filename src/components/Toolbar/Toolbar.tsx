@@ -32,9 +32,9 @@ function Toolbar({ setView }: { setView: Function }) {
         }
     }
 
-    const signOut = () => {
+    const signOut = async () => {
         if (client) {
-            client.signOutUser();
+            await client.signOutUser();
         }
         localStorage.removeItem('user');
         window.location.reload();
