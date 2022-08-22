@@ -144,10 +144,10 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz#6801033be7ff87a6b7cadaf5b337c9f366a3c4b0"
   integrity sha512-WiBSI6JBIhC6LRIsB2Kwh8DsGTlbBU+mLRxJmAe3LjHTdkDpwIbEOZgoXBbZilk/vlfjK8i6nKRAvIRn1XaIMw==
 
-"@snippyly/types@^1.0.45":
-  version "1.0.45"
-  resolved "https://registry.yarnpkg.com/@snippyly/types/-/types-1.0.45.tgz#28d07ad12956152b532de7d1daff24afbe4b6f9a"
-  integrity sha512-kCbw5g6flxpplubhnC4KmwZf02E96JvxmHv7ILkMIgSx3UpieNbqrUbig9BdTtV7NCTEPjfdZ/inOEPehsMoAA==
+"@snippyly/types@1.0.46":
+  version "1.0.46"
+  resolved "https://registry.yarnpkg.com/@snippyly/types/-/types-1.0.46.tgz#c0864deb4cf1af6957362caa56c50c19e8dbe61f"
+  integrity sha512-QSXUCUgLuz5dX3qmYvg5H28mPVreks5cXk8TClrEDq7P83R08V3UWc7zkGOafVdH94hULUW5U0SoS3lWclX2mg==
 
 "@types/json5@^0.0.29":
   version "0.0.29"
