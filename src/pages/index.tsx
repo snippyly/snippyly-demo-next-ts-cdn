@@ -26,12 +26,27 @@ const Home: NextPage = () => {
             <snippyly-cursor></snippyly-cursor>
             <snippyly-comments></snippyly-comments>
             <snippyly-comments-sidebar></snippyly-comments-sidebar>
-            <snippyly-comment-tool>
-              <div className='add-comment-btn'>
-                <img src='https://cdn-icons-png.flaticon.com/512/727/727570.png' alt='Add comment' />
-              </div>
-            </snippyly-comment-tool>
+            <snippyly-comment-tool></snippyly-comment-tool>
             <Toolbar setView={setView} />
+            <div className='toolbar-2'>
+              <div className="recorder-buttons">
+                <div>Recorders:</div>
+                <snippyly-recorder-tool type="all"></snippyly-recorder-tool>
+                <snippyly-recorder-tool type="audio"></snippyly-recorder-tool>
+                <snippyly-recorder-tool type="video"></snippyly-recorder-tool>
+                <snippyly-recorder-tool type="screen"></snippyly-recorder-tool>
+              </div>
+              <div className="huddle-buttons">
+                <div>Huddle:</div>
+                <snippyly-huddle-tool type="all"></snippyly-huddle-tool>
+                <snippyly-huddle-tool></snippyly-huddle-tool>
+                <snippyly-huddle-tool type="video"></snippyly-huddle-tool>
+                <snippyly-huddle-tool type="presentation"></snippyly-huddle-tool>
+              </div>
+            </div>
+            <snippyly-recorder-control-panel></snippyly-recorder-control-panel>
+            <snippyly-recorder-notes></snippyly-recorder-notes>
+            <snippyly-huddle></snippyly-huddle>
             <div className="box-container">
               {
                 Array.from({ length: 25 }, (_, i) => i + 1).map((value) => {
