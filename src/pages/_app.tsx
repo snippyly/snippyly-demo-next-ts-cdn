@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }
   return (
-    <SnippylyProvider apiKey='TA66fUfxZVtGBqGxSTCz'
+    <SnippylyProvider apiKey='4ZkRt6W2Qr6zMuBk04hn'
       config={{
         // featureAllowList: ['presence', 'cursor'],
         // userIdAllowList: ['abcd'],
