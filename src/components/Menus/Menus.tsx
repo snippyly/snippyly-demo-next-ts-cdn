@@ -1,6 +1,6 @@
 /* eslint-disable */
+import { useSnippylyClient } from '@snippyly/react';
 import React, { useEffect, useState } from 'react';
-import { useSnippylyClient } from '../../context/snippylyContext';
 
 function Menus({ onMenuSelect }: { onMenuSelect: Function }) {
 
