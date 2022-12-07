@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { SnippylyPresence, useSnippylyClient } from '@snippyly/react';
 import React, { useEffect, useState } from 'react';
-import { useSnippylyClient } from '../../context/snippylyContext';
 import { Users } from '../../users';
 
 function Toolbar({ setView }: { setView: Function }) {
@@ -53,7 +53,7 @@ function Toolbar({ setView }: { setView: Function }) {
 
     return (
         <div className='header'>
-            <snippyly-presence></snippyly-presence>
+            <SnippylyPresence />
             <div className='menu-container'>
                 <span className='menu' onClick={() => navigateTo('/')}>Home</span>
                 <span className='menu' onClick={() => setView('stream-view')}>Stream View</span>
