@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SnippylyPresence, useSnippylyClient } from '@snippyly/react';
+import { VeltPresence, useVeltClient } from '@veltdev/react';
 import React, { useEffect, useState } from 'react';
 
 function Tabs({ selectedMenu }: { selectedMenu: any }) {
@@ -7,7 +7,7 @@ function Tabs({ selectedMenu }: { selectedMenu: any }) {
     const [tabDocumentParams, setTabDocumentParams] = useState<any>([]);
     const [selectedTab, setSelectedTab] = useState<number>();
 
-    const { client } = useSnippylyClient();
+    const { client } = useVeltClient();
 
     useEffect(() => {
         setTabDocumentParams(tabs.map((tab, index) => {
@@ -50,7 +50,7 @@ function Tabs({ selectedMenu }: { selectedMenu: any }) {
                                 <div key={index} className={`tab ${(selectedTab === index + 1) ? 'selected' : ''}`} onClick={() => setSelectedTab(index + 1)}>
                                     {tab}
                                     <div className='presence-container'>
-                                        <SnippylyPresence maxUsers={1} location={JSON.stringify(tabDocumentParams[index])} />
+                                        <VeltPresence maxUsers={1} location={JSON.stringify(tabDocumentParams[index])} />
                                     </div>
                                 </div>
                             )
