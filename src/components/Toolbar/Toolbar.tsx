@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { SnippylyPresence, useSnippylyClient } from '@snippyly/react';
+import { VeltPresence, useVeltClient } from '@veltdev/react';
 import React, { useEffect, useState } from 'react';
 import { Users } from '../../users';
 
@@ -7,7 +7,7 @@ function Toolbar({ setView }: { setView: Function }) {
     const [selectedUser, setSelectedUser] = useState<any>(null);
     const users = Users;
 
-    const { client } = useSnippylyClient();
+    const { client } = useVeltClient();
 
     useEffect(() => {
         // If user is logged in then set it to selected user state
@@ -18,11 +18,11 @@ function Toolbar({ setView }: { setView: Function }) {
 
     useEffect(() => {
         if (selectedUser && client) {
-            identifySnippyly();
+            identifyVelt();
         }
     }, [selectedUser && client])
 
-    const identifySnippyly = async () => {
+    const identifyVelt = async () => {
         if (client) {
             client.identify(selectedUser).then((res) => {
                 // User login successful
@@ -42,7 +42,7 @@ function Toolbar({ setView }: { setView: Function }) {
 
     const signIn = (user: any): void => {
         // Add custom logic here to login user
-        // Once user is available call identifySnippyly
+        // Once user is available call identifyVelt
         localStorage.setItem('user', JSON.stringify(user));
         setSelectedUser(user);
     }
@@ -53,11 +53,11 @@ function Toolbar({ setView }: { setView: Function }) {
 
     return (
         <div className='header'>
-            <SnippylyPresence />
+            <VeltPresence />
             <div className='menu-container'>
                 <span className='menu' onClick={() => navigateTo('/')}>Home</span>
                 <span className='menu' onClick={() => setView('stream-view')}>Stream View</span>
-                <span className='menu' onClick={() => navigateTo('https://snippyly-demo-next-ts-cdn-wdp.web.app/', '_blank')}>Document Params</span>
+                <span className='menu' onClick={() => navigateTo('https://velt-demo-next-ts-cdn-wdp.web.app/', '_blank')}>Document Params</span>
             </div>
             <div>
                 {

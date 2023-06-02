@@ -144,16 +144,6 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz#6801033be7ff87a6b7cadaf5b337c9f366a3c4b0"
   integrity sha512-WiBSI6JBIhC6LRIsB2Kwh8DsGTlbBU+mLRxJmAe3LjHTdkDpwIbEOZgoXBbZilk/vlfjK8i6nKRAvIRn1XaIMw==
 
-"@snippyly/react@^1.0.20":
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/@snippyly/react/-/react-1.0.20.tgz#f40f64045ad91fe2e86e208d1397df4e8a53981a"
-  integrity sha512-Npxfirs+hfnrJUYq4AYav/qs6gwbR/HPX7U4YXDU8NbvcTPZcQNGDB6bH+uP96wOVNeOodNViNaEnL7Zz3/kGg==
-
-"@snippyly/types@^1.0.81":
-  version "1.0.81"
-  resolved "https://registry.yarnpkg.com/@snippyly/types/-/types-1.0.81.tgz#6e3d89088f77b0a4224451e6c0bccb7039bd0814"
-  integrity sha512-nCC/2fE4NDuGoZnKGpNKZmL8B2DBleZjdWTg9G45XBc9VnHcQzgv4gwR8GF8xbV9PJw/cYueUKnsP3JkuYddyw==
-
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
@@ -233,6 +223,16 @@
   dependencies:
     "@typescript-eslint/types" "5.23.0"
     eslint-visitor-keys "^3.0.0"
+
+"@veltdev/react@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@veltdev/react/-/react-1.0.3.tgz#94a4308f227755e02b3854f82747dd09a7f13d06"
+  integrity sha512-LUvompe/JbMWFRc7TiOOzedGvasjWQhgRuNy3iskDRnX7GeKmEbiv3xVB5up3zncC2RsJDHnZI+pNSf8eBMpIQ==
+
+"@veltdev/types@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@veltdev/types/-/types-1.0.2.tgz#2178aa58160cb512d92e3907c79c27fd45cb4bd7"
+  integrity sha512-EOmShEMARxCQAyA4r95JtScuDm4k05bhDbcOyfO0TFieR2N+AjgmtYR4k1MHaFrLXw+5vEiRctZz9i2d374deQ==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
